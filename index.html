@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>video</title>
+	<script src="https://loadigital.github.io/movies-biloa.comv2/js/jquery.js"></script>
 </head>
 <body>
 <style>
@@ -12,8 +13,18 @@
 		height: auto;
 	}
 </style>
-  <video controls>
-	<source src="https://www.googleapis.com/drive/v3/files/18_Jon_eJHLR-BZ_CM64c47LGE4cWntL3?alt=media&key=AIzaSyCfD4MvxHomtL46XBHnV49SMBv272fHiCg" type="">
- </video>
+  <iframe  src="https://v2.zplayer.live/embed/k6ocqmp88byp"  id='frame' class="play-iframe" frameborder=0 marginwidth=0 marginheight=0 scrolling=yes width=640 height=360 allowfullscreen ></iframe> 
+
+ <script>
+ 	
+ 	$(document).ready(function () {
+  function reorient(e) {
+    var portrait = (window.orientation % 180 == 0);
+    $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
+  }
+  window.onorientationchange = reorient;
+  window.setTimeout(reorient, 0);
+});
+ </script>
 </body>
 </html>
