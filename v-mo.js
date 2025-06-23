@@ -33,7 +33,7 @@ const vid1 = {
             
             card.innerHTML +=`
       
-            <div class="carousel-item active v-carousel-caption" >
+           <div class="carousel-item  v-carousel-caption" >
            <img src="${IMG_URL + data.backdrop_path}" class="d-block" alt="...">
             <div class="carousel-caption  d-md-block">
             <h3>${element.title}</h3>
@@ -46,6 +46,16 @@ const vid1 = {
             
             
             ` 
+
+            const elem = document.querySelectorAll("#elemento > div");
+
+            if (elem.length > 0) {
+              const elements = elem[0];
+
+              console.log(elements)
+
+              elements.classList.add('active');
+            }
   
     };  
     });
