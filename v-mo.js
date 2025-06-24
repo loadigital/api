@@ -6,13 +6,13 @@ const vid1 = {
     .then(respuesta => respuesta.json())
     .then(resultado =>{
    
-        //function pintar(data){
-            //return [...data].sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(0, 8)
-          //}
+          function pintar(resultado){
+            return [...resultado].sort(() => (Math.random() > 0.5 ? 1 : -1))
+          }
           
-    const newVid1 = resultado.reverse().slice(0, 3);
+   // const newAccion = resultado.reverse().slice(0, 8);
 	 //const newArrayNew = pintar(data);
-     newVid1.forEach(element => {
+     pintar(resultado).forEach(element => {
 
             const  API_URL  =  BASE_URL  +  '/movie/' + element.id + '?' + API_KEY + '&language=es-ES';//CODIGO TMBD
             
