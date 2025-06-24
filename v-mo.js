@@ -51,9 +51,6 @@ const vid1 = {
 
             if (elem.length > 0) {
               const elements = elem[0];
-
-              console.log(elements)
-
               elements.classList.add('active');
             }
   
@@ -61,12 +58,12 @@ const vid1 = {
     });
     });
 
-const fragment = document.createDocumentFragment();
-const vid2 = {
+
+const moAccion = {
      method :'POST'
     };
     
-    fetch('https://biloa.site/db/conex-movies.php',vid2)
+    fetch('https://biloa.site/db/conex-movies.php',moAccion)
     .then(respuesta => respuesta.json())
     .then(resultado =>{
    
@@ -74,30 +71,42 @@ const vid2 = {
             //return [...data].sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(0, 8)
           //}
           
-    const newVid2 = resultado.reverse().slice(0, 10);
+    const newAccion = resultado.reverse();
 	 //const newArrayNew = pintar(data);
-     newVid2.forEach(element => {
+     newAccion.forEach(element => {
 
-            
-           // const card = document.createElement("div");
-            const cardM = document.querySelector(".b-container-card");
+      if (element.ano === "2025") {
+        const scrolling1 = document.querySelector(".scrolling1");
+        const card_scrolling1 = document.createElement("div");
+        card_scrolling1.classList = "scrolling-card";
+        card_scrolling1.innerHTML += `
+        <img src="${element.img}" alt="">
+        `
+        const fragment_ano = document.createDocumentFragment();
+        fragment_ano.appendChild(card_scrolling1);
+        scrolling1.appendChild(fragment_ano);
+      };
 
-            const divCardM = document.createElement("div");
-            divCardM.className ="flx-j-center vx"
-            divCardM .innerHTML +=`
-            <div class="b-card flx-j-center">
-            <img class="b-img-card" src="${element.img}" alt="">
-            <div class="b-body-card w-12 flx-j-center">
-            <h5>${element.title}</h5>
-            </div>
+const content = document.querySelector(".scrolling1");
+document.querySelector("#scrolling-button-right").addEventListener("click", () => {content.scrollLeft += 800;});
+document.querySelector("#scrolling-button-left").addEventListener("click", () => {content.scrollLeft -= 800;});
 
-          </div>
-           
-            
-            
-            `
-           
-      fragment.appendChild(divCardM);
-      cardM.appendChild(fragment);
-    });
+
+
+ if (element.genero === "28") {
+        const scrolling2 = document.querySelector(".scrolling2");
+        const card_scrolling2 = document.createElement("div");
+        card_scrolling2.classList = "scrolling-card";
+        card_scrolling2.innerHTML += `
+        <img src="${element.img}" alt="">
+        `
+        const fragment_accion = document.createDocumentFragment();
+        fragment_accion.appendChild(card_scrolling2);
+        scrolling2.appendChild(fragment_accion);
+      };
+
+const content2 = document.querySelector(".scrolling2");
+document.querySelector("#scrolling-button-right2").addEventListener("click", () => {content2.scrollLeft += 800;});
+document.querySelector("#scrolling-button-left2").addEventListener("click", () => {content2.scrollLeft -= 800;});
+  });
   });
