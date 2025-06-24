@@ -33,7 +33,7 @@ const vid1 = {
             
             card.innerHTML +=`
       
-           <div class="carousel-item  v-carousel-caption" >
+           <div class="carousel-item v-carousel-caption" >
            <img src="${IMG_URL + data.backdrop_path}" class="d-block" alt="...">
             <div class="carousel-caption  d-md-block">
             <h3>${element.title}</h3>
@@ -131,6 +131,111 @@ document.querySelector("#scrolling-button-left3").addEventListener("click", () =
   
 
 
+if (element.genero === "12") {
+        const scrolling4 = document.querySelector(".scrolling4");
+        const card_scrolling4 = document.createElement("div");
+        card_scrolling4.classList = "scrolling-card";
+        card_scrolling4.innerHTML += `
+        <a href="#"><img src="${element.img}" alt=""></a>
+        <p class="b-title">${element.title}</p class="b-title">
+        `
+        const fragment_aventura = document.createDocumentFragment();
+        fragment_aventura.appendChild(card_scrolling4);
+        scrolling4.appendChild(fragment_aventura);
+      };
+
+const content4 = document.querySelector(".scrolling4");
+document.querySelector("#scrolling-button-right4").addEventListener("click", () => {content4.scrollLeft += 800;});
+document.querySelector("#scrolling-button-left4").addEventListener("click", () => {content4.scrollLeft -= 800;});
+
+
+if (element.genero === "16") {
+        const scrolling5 = document.querySelector(".scrolling5");
+        const card_scrolling5 = document.createElement("div");
+        card_scrolling5.classList = "scrolling-card";
+        card_scrolling5.innerHTML += `
+        <a href="#"><img src="${element.img}" alt=""></a>
+        <p class="b-title">${element.title}</p class="b-title">
+        `
+        const fragment_animacion = document.createDocumentFragment();
+        fragment_animacion.appendChild(card_scrolling5);
+        scrolling5.appendChild(fragment_animacion);
+      };
+
+const content5 = document.querySelector(".scrolling5");
+document.querySelector("#scrolling-button-right5").addEventListener("click", () => {content5.scrollLeft += 800;});
+document.querySelector("#scrolling-button-left5").addEventListener("click", () => {content5.scrollLeft -= 800;});
+  
+
+if (element.genero === "80") {
+        const scrolling6 = document.querySelector(".scrolling6");
+        const card_scrolling6 = document.createElement("div");
+        card_scrolling6.classList = "scrolling-card";
+        card_scrolling6.innerHTML += `
+        <a href="#"><img src="${element.img}" alt=""></a>
+        <p class="b-title">${element.title}</p class="b-title">
+        `
+        const fragment_crimen = document.createDocumentFragment();
+        fragment_crimen.appendChild(card_scrolling6);
+        scrolling6.appendChild(fragment_crimen);
+      };
+
+const content6 = document.querySelector(".scrolling6");
+document.querySelector("#scrolling-button-right6").addEventListener("click", () => {content6.scrollLeft += 800;});
+document.querySelector("#scrolling-button-left6").addEventListener("click", () => {content6.scrollLeft -= 800;});
+ 
+if (element.genero === "18") {
+        const scrolling7 = document.querySelector(".scrolling7");
+        const card_scrolling7 = document.createElement("div");
+        card_scrolling7.classList = "scrolling-card";
+        card_scrolling7.innerHTML += `
+        <a href="#"><img src="${element.img}" alt=""></a>
+        <p class="b-title">${element.title}</p class="b-title">
+        `
+        const fragment_drama = document.createDocumentFragment();
+        fragment_drama.appendChild(card_scrolling7);
+        scrolling7.appendChild(fragment_drama);
+      };
+
+const content7 = document.querySelector(".scrolling7");
+document.querySelector("#scrolling-button-right7").addEventListener("click", () => {content7.scrollLeft += 800;});
+document.querySelector("#scrolling-button-left7").addEventListener("click", () => {content7.scrollLeft -= 800;});
+ 
+if (element.genero === "27") {
+        const scrolling8 = document.querySelector(".scrolling8");
+        const card_scrolling8 = document.createElement("div");
+        card_scrolling8.classList = "scrolling-card";
+        card_scrolling8.innerHTML += `
+        <a href="#"><img src="${element.img}" alt=""></a>
+        <p class="b-title">${element.title}</p class="b-title">
+        `
+        const fragment_terror = document.createDocumentFragment();
+        fragment_terror.appendChild(card_scrolling8);
+        scrolling8.appendChild(fragment_terror);
+      };
+
+const content8 = document.querySelector(".scrolling8");
+document.querySelector("#scrolling-button-right8").addEventListener("click", () => {content8.scrollLeft += 800;});
+document.querySelector("#scrolling-button-left8").addEventListener("click", () => {content8.scrollLeft -= 800;});
+ 
+
+if (element.genero === "10749") {
+        const scrolling9 = document.querySelector(".scrolling9");
+        const card_scrolling9 = document.createElement("div");
+        card_scrolling9.classList = "scrolling-card";
+        card_scrolling9.innerHTML += `
+        <a href="#"><img src="${element.img}" alt=""></a>
+        <p class="b-title">${element.title}</p class="b-title">
+        `
+        const fragment_romance = document.createDocumentFragment();
+        fragment_romance.appendChild(card_scrolling9);
+        scrolling9.appendChild(fragment_romance);
+      };
+
+const content9 = document.querySelector(".scrolling9");
+document.querySelector("#scrolling-button-right9").addEventListener("click", () => {content9.scrollLeft += 800;});
+document.querySelector("#scrolling-button-left9").addEventListener("click", () => {content9.scrollLeft -= 800;});
+ 
 
 });
 });
