@@ -80,7 +80,8 @@ const moAccion = {
         const card_scrolling1 = document.createElement("div");
         card_scrolling1.classList = "scrolling-card";
         card_scrolling1.innerHTML += `
-        <img src="${element.img}" alt="">
+        <a href="#"><img src="${element.img}" alt=""></a>
+        <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_ano = document.createDocumentFragment();
         fragment_ano.appendChild(card_scrolling1);
@@ -98,7 +99,8 @@ document.querySelector("#scrolling-button-left").addEventListener("click", () =>
         const card_scrolling2 = document.createElement("div");
         card_scrolling2.classList = "scrolling-card";
         card_scrolling2.innerHTML += `
-        <img src="${element.img}" alt="">
+        <a href="#"><img src="${element.img}" alt=""></a>
+        <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_accion = document.createDocumentFragment();
         fragment_accion.appendChild(card_scrolling2);
@@ -108,5 +110,27 @@ document.querySelector("#scrolling-button-left").addEventListener("click", () =>
 const content2 = document.querySelector(".scrolling2");
 document.querySelector("#scrolling-button-right2").addEventListener("click", () => {content2.scrollLeft += 800;});
 document.querySelector("#scrolling-button-left2").addEventListener("click", () => {content2.scrollLeft -= 800;});
-  });
-  });
+
+
+if (element.puntuacion === "7.9") {
+        const scrolling3 = document.querySelector(".scrolling3");
+        const card_scrolling3 = document.createElement("div");
+        card_scrolling3.classList = "scrolling-card";
+        card_scrolling3.innerHTML += `
+        <a href="#"><img src="${element.img}" alt=""></a>
+        <p class="b-title">${element.title}</p class="b-title">
+        `
+        const fragment_populares = document.createDocumentFragment();
+        fragment_populares.appendChild(card_scrolling3);
+        scrolling3.appendChild(fragment_populares);
+      };
+
+const content3 = document.querySelector(".scrolling3");
+document.querySelector("#scrolling-button-right3").addEventListener("click", () => {content3.scrollLeft += 800;});
+document.querySelector("#scrolling-button-left3").addEventListener("click", () => {content3.scrollLeft -= 800;});
+  
+
+
+
+});
+});
