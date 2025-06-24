@@ -6,9 +6,14 @@ const vid1 = {
     .then(respuesta => respuesta.json())
     .then(resultado =>{
    
-     const newVid1 = resultado.reverse().slice(0, 3);
+        //function pintar(data){
+            //return [...data].sort(() => (Math.random() > 0.5 ? 1 : -1)).slice(0, 8)
+          //}
+          
+    const newVid1 = resultado.reverse().slice(0, 3);
 	 //const newArrayNew = pintar(data);
      newVid1.forEach(element => {
+
             const  API_URL  =  BASE_URL  +  '/movie/' + element.id + '?' + API_KEY + '&language=es-ES';//CODIGO TMBD
             
             getMovie(API_URL);
@@ -69,7 +74,6 @@ const moAccion = {
    // const newAccion = resultado.reverse().slice(0, 8);
 	 //const newArrayNew = pintar(data);
      pintar(resultado).forEach(element => {
-
 
       if (element.ano === "2025") {
         const scrolling1 = document.querySelector(".scrolling1");
