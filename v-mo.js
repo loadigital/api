@@ -40,7 +40,7 @@ const vid1 = {
             
             <p><i class="bi-star-fill"></i><i class="bi-star-half"></i><i class="bi-star"></i> ${data.vote_average.toFixed(1)}</p>
             <p class="genre">${data.genres[0].name}</p>
-            <a class="a" href=""><button class="button-0 b-boton-ver">Ver película</button></a>
+            <a class="a flx-j-center" href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><button class="button-0 b-boton-ver">Ver película</button></a>
             </div>
             </div> 
             
@@ -80,7 +80,7 @@ const moAccion = {
         const card_scrolling1 = document.createElement("div");
         card_scrolling1.classList = "scrolling-card";
         card_scrolling1.innerHTML += `
-        <a href="#"><img src="${element.img}" alt=""></a>
+        <a href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><img src="${element.img}" alt=""></a>
         <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_ano = document.createDocumentFragment();
@@ -99,7 +99,7 @@ document.querySelector("#scrolling-button-left").addEventListener("click", () =>
         const card_scrolling2 = document.createElement("div");
         card_scrolling2.classList = "scrolling-card";
         card_scrolling2.innerHTML += `
-        <a href="#"><img src="${element.img}" alt=""></a>
+        <a href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><img src="${element.img}" alt=""></a>
         <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_accion = document.createDocumentFragment();
@@ -117,7 +117,7 @@ if (element.puntuacion === "7.9") {
         const card_scrolling3 = document.createElement("div");
         card_scrolling3.classList = "scrolling-card";
         card_scrolling3.innerHTML += `
-        <a href="#"><img src="${element.img}" alt=""></a>
+        <a href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><img src="${element.img}" alt=""></a>
         <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_populares = document.createDocumentFragment();
@@ -136,7 +136,7 @@ if (element.genero === "12") {
         const card_scrolling4 = document.createElement("div");
         card_scrolling4.classList = "scrolling-card";
         card_scrolling4.innerHTML += `
-        <a href="#"><img src="${element.img}" alt=""></a>
+        <a href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><img src="${element.img}" alt=""></a>
         <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_aventura = document.createDocumentFragment();
@@ -154,7 +154,7 @@ if (element.genero === "16") {
         const card_scrolling5 = document.createElement("div");
         card_scrolling5.classList = "scrolling-card";
         card_scrolling5.innerHTML += `
-        <a href="#"><img src="${element.img}" alt=""></a>
+        <a href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><img src="${element.img}" alt=""></a>
         <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_animacion = document.createDocumentFragment();
@@ -172,7 +172,7 @@ if (element.genero === "80") {
         const card_scrolling6 = document.createElement("div");
         card_scrolling6.classList = "scrolling-card";
         card_scrolling6.innerHTML += `
-        <a href="#"><img src="${element.img}" alt=""></a>
+        <a href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><img src="${element.img}" alt=""></a>
         <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_crimen = document.createDocumentFragment();
@@ -189,7 +189,7 @@ if (element.genero === "18") {
         const card_scrolling7 = document.createElement("div");
         card_scrolling7.classList = "scrolling-card";
         card_scrolling7.innerHTML += `
-        <a href="#"><img src="${element.img}" alt=""></a>
+        <a href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><img src="${element.img}" alt=""></a>
         <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_drama = document.createDocumentFragment();
@@ -206,7 +206,7 @@ if (element.genero === "27") {
         const card_scrolling8 = document.createElement("div");
         card_scrolling8.classList = "scrolling-card";
         card_scrolling8.innerHTML += `
-        <a href="#"><img src="${element.img}" alt=""></a>
+        <a href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><img src="${element.img}" alt=""></a>
         <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_terror = document.createDocumentFragment();
@@ -224,7 +224,7 @@ if (element.genero === "10749") {
         const card_scrolling9 = document.createElement("div");
         card_scrolling9.classList = "scrolling-card";
         card_scrolling9.innerHTML += `
-        <a href="#"><img src="${element.img}" alt=""></a>
+        <a href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><img src="${element.img}" alt=""></a>
         <p class="b-title">${element.title}</p class="b-title">
         `
         const fragment_romance = document.createDocumentFragment();
