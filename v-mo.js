@@ -40,7 +40,7 @@ const vid1 = {
             
             <p><i class="bi-star-fill"></i><i class="bi-star-half"></i><i class="bi-star"></i> ${data.vote_average.toFixed(1)}</p>
             <p class="genre">${data.genres[0].name}</p>
-            <a class="a flx-j-center" href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad}"><button class="button-0 b-boton-ver">Ver película</button></a>
+            <a class="a flx-j-center" href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad + '&ge=' + element.genero}"><button class="button-0 b-boton-ver">Ver película</button></a>
             </div>
             </div> 
             
