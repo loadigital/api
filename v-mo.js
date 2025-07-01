@@ -239,3 +239,123 @@ document.querySelector("#scrolling-button-left9").addEventListener("click", () =
 
 });
 });
+
+
+
+
+//buscador
+
+
+function ponleFocus(){
+    document.getElementById("inp").focus();
+}
+ponleFocus();
+
+const inp = document.getElementById("inp");
+const cont_cards = document.getElementById("cont-cardss")
+const fragment = document.createDocumentFragment();
+
+const db_movies = {
+     method :'POST'
+    };
+    
+    fetch('https://biloa.site/db/conex-movies.php',db_movies)
+    .then(resp_movies => resp_movies.json())
+    .then(result_movies =>{
+
+const db_series = {
+     method :'POST'
+    };
+    
+    fetch('https://biloa.site/db/conex-series.php',db_series)
+    .then(resp_series => resp_series.json())
+    .then(result_series =>{
+
+    let new_db = [...result_movies, ...result_series];
+
+    new_db.forEach(element =>{
+      if (element.hasOwnProperty('poster')) {
+        element.id_buscador = "serie"
+      }else{
+        element.id_buscador = "pelicula"
+      };
+
+
+      if (element.id_buscador === "pelicula") {
+        const div_cont_cards = document.createElement("div");
+        div_cont_cards.className = "cont-cards"
+        div_cont_cards.innerHTML += `
+        
+        <div class="co-cards">
+            
+        <div class="cards" style="display:none;" >
+         <div class="title-cards"><a class="link-play"  href="${videoLink + element.id + '&v_id=' + element.video + '&cal=' + element.calidad + '&ge=' + element.genero}">
+            <img src="${element.img}" alt=""> 
+            <p> ${element.title} <br><i class="bi-star-fill"></i><i class="bi-star-half"></i><i class="bi-star"></i> ${element.puntuacion}<br>${element.ano}</p>
+           
+         </a></div>
+        </div>
+        
+        </div>
+        
+        `
+        const clone =  div_cont_cards.cloneNode(true); 
+        fragment.appendChild(clone);
+        cont_cards.appendChild(fragment);
+      }else{
+
+         const div_cont_cards = document.createElement("div");
+        div_cont_cards.className = "cont-cards"
+        div_cont_cards.innerHTML += `
+        
+        <div class="co-cards">
+            
+        <div class="cards" style="display:none;">
+         <div class="title-cards"><a class="link-play"  href="${linkSeries + element.id + '&v_id=' + element.video + '&id_db=' + element.poster + '&ge=' + element.genero}">
+            <img src="${element.img}" alt=""> 
+            <p> ${element.title} <br><i class="bi-star-fill"></i><i class="bi-star-half"></i><i class="bi-star"></i> ${element.puntuacion}<br>${element.ano}</p>
+           
+         </a></div>
+        </div>
+        
+        </div>
+        
+        `
+        const clone =  div_cont_cards.cloneNode(true); 
+        fragment.appendChild(clone);
+        cont_cards.appendChild(fragment);
+      };
+       
+
+ 
+    });
+
+    });
+    });
+
+      
+
+
+  $(document).ready(function(){
+    $("#inp").on("keyup", function() {
+        $(".cards").show();
+
+   document.querySelector(".no-results").style.display="flex";
+   document.querySelector(".no-resultss").style.display="none";
+
+    var value = $(this).val().toLowerCase();
+    $(".title-cards").filter(function() {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+
+    });
+    });
+    });//buscador 
+
+    document.querySelector(".xc").addEventListener("click", ()=>{
+       document.querySelector(".cont-main").style.left="-100%"
+    })
+   
+    function despl() {
+       document.querySelector(".cont-main").style.left="0px"
+    }
+			       
