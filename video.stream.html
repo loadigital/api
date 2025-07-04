@@ -114,7 +114,158 @@ if (s == "3") {
 
 </script>
 
-<script type='text/javascript' src='//disguisedtimingbreath.com/72/e2/82/72e282fb2f9320d648851fd37025d863.js'></script>
+<style>
+  .main-anuncios{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  z-index: 201;
+}
+
+.content-banner-anuncio{
+  width: 50%;
+  height:90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px 5px;
+  
+}
+.content-banner{
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+.conten-banner .co-time{
+    width: 100%;
+    height: 100%;
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+     align-items: center;
+    color: black;
+   font-size: 20px;
+    text-align: center;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.conten-banner .co-texto{
+     width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+    color: black;
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+     margin-top: 20px;
+}
+.content-banner-banner .conten-banner{
+    background: #fff;
+    
+}
+.anuncio-content{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     margin-top: 30px;
+   
+}
+.anuncio-content iframe{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     border-radius: 8px 8px;
+     box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 768px) {
+    .content-banner-anuncio{
+        width: 100%;
+        height:70%;
+    }
+   
+}      
+        
+</style>
+<!--modal-->
+<div class="main-anuncios " id="x-main">
+    
+    <div class="content-banner-anuncio">
+        
+        <div class="content-banner-banner ">
+        <div class="conten-banner ">
+           <h3 class="co-texto ">¡Gracias por visitarnos!</h3>
+            <h5 class="co-texto ">Estas viendo un anuncio publicitario en breve veraz el contenido.</h5>
+            <div class="anuncio-content ">
+               
+                <script type="text/javascript">
+	                atOptions = {
+		            'key' : '18db402296aa8b4d694c5703257eba38',
+		            'format' : 'iframe',
+		            'height' : 250,
+		            'width' : 300,
+		            'params' : {}
+	                };
+                </script>
+                <script type="text/javascript" src="//disguisedtimingbreath.com/18db402296aa8b4d694c5703257eba38/invoke.js"></script>
+
+
+            </div>
+            <p class="co-texto ">Por favor espera un momento...</p>
+            <p class="co-time " id="time"></p>
+        </div>
+        </div>
+    </div>
+    
+    </div>
+
+    <script>
+      //modal
+var control = 30;
+
+function times() {
+
+	document.getElementById("time").innerHTML = control ;
+
+	if(control == 0) {
+
+		document.getElementById("x-main").style.display="none"
+	}else{
+		control--;
+		setTimeout("times()",1000);
+	}
+}
+
+
+
+times()
+    </script>
 
 </body>
 </html>
