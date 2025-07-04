@@ -112,6 +112,8 @@ if (s == "3") {
 	document.getElementById("iframe").src ='https://mo.biloa.site/v/'+ id;
 }
  </script>
+
+	
 <style>
   .main-anuncios{
   width: 100%;
@@ -123,20 +125,20 @@ if (s == "3") {
   align-items: center;
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
-  padding: 3px;
   z-index: 201;
 }
 
 .content-banner-anuncio{
   width: 100%;
+  max-width: 720px;
   height:90%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   background: #fff;
+  padding: 7px 7px;
   border-radius: 5px 5px;
   
 }
@@ -152,7 +154,6 @@ if (s == "3") {
 }
 .conten-banner .co-time{
     width: 100%;
-   
      display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -160,23 +161,17 @@ if (s == "3") {
      align-items: center;
     color: black;
    font-size: 20px;
-    text-align: center;
+   font-family: Arial;
     padding: 0px;
     margin-bottom: 0px;
 }
 .conten-banner .co-texto{
-     width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+     width: 70%;
     color: black;
     padding: 0px;
     margin-bottom: 0px;
     text-align: center;
-     margin-top: 20px;
+     font-family: Arial;
 }
 
 .conten-banner  .anuncio-content{
@@ -189,6 +184,7 @@ if (s == "3") {
    
 }
 .anuncio-content iframe{
+    margin-top: 10px;
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
@@ -260,6 +256,5 @@ function times() {
 
 times()
     </script>
-
 </body>
 </html>
