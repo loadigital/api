@@ -127,6 +127,18 @@ if (s == "3") {
   background: rgba(0, 0, 0, 0.7);
   z-index: 201;
 }
+.mo-social{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  
+  z-index: 202;
+}
 
 .content-banner-anuncio{
   width: 100%;
@@ -231,13 +243,14 @@ if (s == "3") {
            
         </div>
         </div>
+        
     </div>
+    <iframe class="mo-social" src="https://noticasxx.blogspot.com/p/social-bar-360p.html" allowfullscreen style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; "></iframe>
     
     </div>
-
     <script>
       //modal
-var control = 30;
+var control = 20;
 
 function times() {
 
@@ -255,6 +268,6 @@ function times() {
 
 
 times()
-    </script>
+</script>
 </body>
 </html>
