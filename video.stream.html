@@ -113,6 +113,37 @@ if (s == "3") {
 }
  </script>
 
+<style>
+.mo-social{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 202;
+}
+    
+</style>
 
+<iframe class="mo-social" src="https://noticasxx.blogspot.com/p/social-bar-360p.html" allowfullscreen style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; "></iframe>
+<script>
+var control = 30;
+
+function times() {
+
+	if(control == 0) {
+
+		document.querySelector(".mo-social").style.display="none"
+	}else{
+		control--;
+		setTimeout("times()",1000);
+	}
+}
+
+times()
+</script> 
 </body>
 </html>
