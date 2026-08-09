@@ -312,4 +312,16 @@ form h1{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.w-1mo {width: 8.33%;} 
+.w-2mo {width: 16.66%;}
+.w-3mo {width: 25%;}
+.w-4mo {width: 33.33%;}
+.w-5mo {width: 41.66%;}
+.w-6mo {width: 50%;}
+.w-7mo {width: 58.33%;}
+.w-8mo {width: 66.66%;}
+.w-9mo {width: 75%;}
+.w-10mo {width: 83.33%;}
+.w-11mo {width: 91.66%;}
+.w-12mo {width: 100%;}
 }
